@@ -1,25 +1,20 @@
 import { useEffect, useState } from 'react';
-import { useSession } from 'next-auth/react';
-import Nav from './Nav';
-import Header from './Header';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../actions/userActions';
 import Logo from './Logo';
+import Nav from './Nav';
+import Header from './Header';
+import Link from 'next/link';
 
 const Layout = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
-  const { data: session } = useSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
   const userLoginReducer = useSelector((state) => state.userLoginReducer);
   const { error, userInfo } = userLoginReducer;
-
-  console.log("UserInfo: ", userInfo)
-  
 
   const router = useRouter();
 
@@ -34,7 +29,7 @@ const Layout = ({ children }) => {
     dispatch(login(email, password));
   };
 
-  if (!session && !userInfo) {
+  if (typeof window !== 'undefined' && !userInfo) {
     return (
       <div className='overflow-y-auto bg-white min-h-screen w-screen grid place-items-center'>
         <div className='flex items-center justify-center flex-col p-4'>

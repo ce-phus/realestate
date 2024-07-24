@@ -1,52 +1,31 @@
 /** @type {import('tailwindcss').Config} */
-const {fontFamily} = require('tailwindcss/defaultTheme')
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ["./src/**/*.{js,jsx}",
+  'node_modules/flowbite-react/lib/esm/**/*.js'],
+  darkMode: "class",
+  mode: "jit",
   theme: {
-    
-    container: {
-      padding: {
-        DEFAULT: '15px',
-      },
-    },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
-    },
     extend: {
       colors: {
-        primary: '#28282B',
-        secondary: '#393A47',
-        accent: '#F13024',
+        bgprimary:"#OC1821",
+        accent: "#efdfbb",
+        dark: "#1e1e1e",
+        secondary: "#111111",
+        tertiary: "EAE0C8",
+        grade: "#c30010"
+      },
+      boxShadow: {
+        card: "0px 35px 120px -15px #211e35",
+      },
+      screens: {
+        xs: "450px",
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
-      },
-      animation: {
-        'spin-slow': 'spin 6s linear infinite',
-      },
-      fontFamily: {
-        poppins: [`var(--font-poppins)`, 'sans-serif'],
-        sora: [`var(--font-sora)`, 'sans-serif'],
+        "hero-pattern": "url('/src/assets/hero-slider-1.jpg')",
+        "hero-bg": "url('/src/assets/products/GamingPc.jpg')",
+        "hero-footer": "url('/src/assets/footer-bg.jpg')"
       },
     },
   },
-  container: {
-    padding: {
-      DEFAULT: '15px',
-    },
-  },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [require('flowbite/plugin')],
 };

@@ -8,8 +8,9 @@ const Property = ({ property }) => {
 	function numberWithCommas(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
-	const baseUrl = 'http://localhost:8000';
-    const fullImageUrl = baseUrl + property.cover_photo;
+	const API_URL = process.env.NEXT_PUBLIC_API_URL;
+	
+    const fullImageUrl = API_URL + property.cover_photo;
 	console.log('Property: ', property)
 
 	return (

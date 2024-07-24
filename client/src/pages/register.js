@@ -11,7 +11,6 @@ import { register } from '@/actions/userActions';
 
 const Register = () => {
     const [showNav, setShowNav] = useState(false);
-    const { data: session } = useSession();
     const [username, setUsername] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -43,7 +42,7 @@ const Register = () => {
       }
     };
   
-    if (!session && !userInfo) {
+    if ( !userInfo) {
       return (
         <>
           <div className="bg-gray-300 h-screen flex flex-col items-center justify-center overflow-y-auto mb-5 pb-20 pt-20">
@@ -84,7 +83,7 @@ const Register = () => {
                 </div>
                 <div className="mb-5">
                   <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-gray-900">Confirm Password</label>
-                  <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required value={re_password} onChange={(e) => setConfirmPassword(e.target.value)} />
+                  <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className="flex items-start mb-5">
                   <div className="flex items-center h-5">
