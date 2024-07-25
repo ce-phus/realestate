@@ -32,7 +32,7 @@ export const listAllPropertiesReducer = (state = { properties: [] }, action) => 
         case LIST_ALL_PROPERTIES_REQUEST:
             return { loading: true, properties: [] };
         case LIST_ALL_PROPERTIES_SUCCESS:
-            return { loading: false, properties: action.payload };
+            return { loading: false, properties: action.payload,error: null };
         case LIST_ALL_PROPERTIES_FAIL:
             return { loading: false, error: action.payload };
         default:

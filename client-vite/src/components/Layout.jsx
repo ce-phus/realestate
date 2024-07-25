@@ -2,13 +2,18 @@ import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../actions/userActions';
-import { loginimage } from '../assets';
 import Sidenav from './Sidenav';
 import AuthLayout from './AuthLayout';
+import Header from './Header';
+import { useRef } from 'react';
+import { logout } from '../actions/userActions';
 
 const Layout = ({ children }) => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
   const dispatch = useDispatch();
   const userLoginReducer = useSelector((state) => state.userLoginReducer);
@@ -22,9 +27,33 @@ const Layout = ({ children }) => {
     }
   }, [navigate, userInfo]);
 
+  useEffect(() => {
+    if (error === "Given token not valid for any token type") {
+      dispatch(logout());
+      navigate('/');
+    }
+  }, [error, navigate, dispatch]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setSidebarOpen(false);
+      }
+    };
+  
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password));
+  };
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
   };
 
   if (!userInfo) {
@@ -75,11 +104,12 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className='min-h-screen overflow-y-auto dark:bg-dark'>
-      <div className='flex'>
-        <Sidenav />
+    <div className='min-h-screen overflow-y-auto dark:bg-dark flex'>
+      <Header toggleSidebar={toggleSidebar} />
+      <Sidenav isSidebarOpen={isSidebarOpen} ref={sidebarRef}/>
+      <div className='flex pt-20 justify-center flex-grow'>
+        {children}
       </div>
-      {children}
     </div>
   );
 };

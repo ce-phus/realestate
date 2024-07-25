@@ -27,7 +27,7 @@ import {
     UPLOAD_PROPERTY_IMAGE_FAIL,
 } from '../constants/index';
 
-const API_URL = import.meta.env.NEXT_PUBLIC_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 // actions/propertiesActions.js
 export const listAllProperties = () => async (dispatch, getState) => {
@@ -54,7 +54,7 @@ export const listAllProperties = () => async (dispatch, getState) => {
   
       dispatch({
         type: LIST_ALL_PROPERTIES_SUCCESS,
-        payload: data.results,
+        payload: data,
       });
     } catch (error) {
       dispatch({

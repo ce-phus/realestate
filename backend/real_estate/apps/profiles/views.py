@@ -13,8 +13,22 @@ class AgentListAPIView(generics.ListAPIView):
     queryset = Profile.objects.filter(is_agent=True)
     serializer_class = ProfileSerializer
 
+
+"""
+    from rest_framework import api_view, permissions
+
+    @api_view(["GET"])
+    @permission_classes((permissions.IsAuthenticated))
+    def get_all_agents(request):
+        agents = Profile.objects.filter(is_agent=True)
+        serializer=ProfileSerializer(agents, many=True)
+        name_spaced_response={"agents": serializer.data}
+        return Response(name_spaced_response,status=status.HTTP_200_OK)
+"""
+
+
 class TopAgentsListAPIView(generics.ListAPIView):
-    permission_classes= [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Profile.objects.filter(top_agent=True)
     serializer_class = ProfileSerializer
 
@@ -24,10 +38,16 @@ class GetProfileAPIView(APIView):
 
     def get(self, request):
         user = self.request.user
-        user_profile = Profile.objects.get(user=user)
+        try:
+            user_profile = Profile.objects.get(user=user)
+        except Profile.DoesNotExist:
+            return Response({"detail": "Profile not found."}, status=status.HTTP_404_NOT_FOUND)
+        
         serializer = ProfileSerializer(user_profile, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
-    
+
+
+
 class UpdateProfileAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     renderer_classes = [ProfileJSONRenderer]
@@ -36,18 +56,18 @@ class UpdateProfileAPIView(APIView):
 
     def patch(self, request, username):
         try:
-            Profile.objects.get(user__username=username)
+            profile = Profile.objects.get(user__username=username)
         except Profile.DoesNotExist:
             raise ProfileNotFound
-        
+
         user_name = request.user.username
         if user_name != username:
             raise NotYourProfile
-        
+
         data = request.data
-        serializer =  UpdateProfileSerializer(
-            instance = request.user.profile, data=data, partial =True
-        )
-        serializer.is_valid()
+        serializer = UpdateProfileSerializer(instance=profile, data=data, partial=True)
+
+        serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_200_OK)
+

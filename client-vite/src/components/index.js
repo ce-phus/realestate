@@ -3,11 +3,17 @@ import Layout from "./Layout"
 import Sidenav from "./Sidenav"
 import DarkMode from "./Darkmode"
 import AuthLayout from "./AuthLayout"
+import Spinner from "./Spinner"
+import Title from "./Title"
+import Property from "./Property"
 
 export {
     Header,
     Layout,
     Sidenav,
     DarkMode,
-    AuthLayout
+    AuthLayout,
+    Spinner,
+    Title,
+    Property
 }

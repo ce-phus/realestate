@@ -3,7 +3,9 @@ import { combineReducers } from "redux";
 import { 
     userLoginReducer,
     userRegisterReducer,
-    userActivateReducer
+    userActivateReducer,
+    userResetPasswordConfirmReducer,
+    userResetPasswordReducer,
      } from "./userReducer";
 
 import {
@@ -28,6 +30,8 @@ const allReducers = combineReducers({
     userLoginReducer,
     userRegisterReducer,
     userActivateReducer,
+    userResetPasswordConfirmReducer,
+    userResetPasswordReducer,
     profileDetailsReducer,
     profileUpdateReducer,
     agentListReducer,

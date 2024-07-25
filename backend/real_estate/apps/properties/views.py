@@ -35,22 +35,18 @@ class PropertyFilter(django_filters.FilterSet):
 class ListAllPropertiesAPIView(generics.ListAPIView):
     serializer_class = PropertySerializer
     queryset = Property.objects.all().order_by("-created_at")
-    pagination_class = PropertyPagination
+    # pagination_class = PropertyPagination
     filter_backends = [
         DjangoFilterBackend,
         filters.SearchFilter,
-        filters.OrderingFilter
+        filters.OrderingFilter,
     ]
 
     filterset_class = PropertyFilter
-    search_fileds = ['country', 'city']
-    ordering_fields = ['created_at']
+    search_fields = ["country", "city"]
+    ordering_fields = ["created_at"]
 
-    def get_queryset(self):
-        user = self.request.user
-        queryset = Property.objects.filter(user=user).order_by("-created_at")
-        return queryset
-    
+
 class ListAgentsPropertiesAPIView(generics.ListAPIView):
 
     serializer_class = PropertySerializer
@@ -114,7 +110,7 @@ def update_property_api_view(request, slug):
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data)
     
-@api_view
+@api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])
 def create_property_api_view(request):
     user = request.user

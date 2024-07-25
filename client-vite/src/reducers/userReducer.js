@@ -8,7 +8,13 @@ import {
     USER_REGISTER_FAIL,
     USER_ACTIVATE_REQUEST,
     USER_ACTIVATE_SUCCESS,
-    USER_ACTIVATE_FAIL
+    USER_ACTIVATE_FAIL,
+    USER_RESET_PASSWORD_REQUEST,
+    USER_RESET_PASSWORD_SUCCESS,
+    USER_RESET_PASSWORD_FAIL,
+    USER_RESET_PASSWORD_CONFIRM_REQUEST,
+    USER_RESET_PASSWORD_CONFIRM_SUCCESS,
+    USER_RESET_PASSWORD_CONFIRM_FAIL
 } from '../constants/index';
 
 const initialState = {
@@ -53,13 +59,45 @@ const userActivateInitialState = {
 
 export const userActivateReducer = (state = userActivateInitialState, action) => {
     switch (action.type) {
-      case USER_ACTIVATE_REQUEST:
-        return { loading: true, success: false };
-      case USER_ACTIVATE_SUCCESS:
-        return { loading: false, success: true, error: null };
-      case USER_ACTIVATE_FAIL:
-        return { loading: false, success: false, error: action.payload };
-      default:
-        return state;
+        case USER_ACTIVATE_REQUEST:
+            return { loading: true, success: false };
+        case USER_ACTIVATE_SUCCESS:
+            return { loading: false, success: true, error: null };
+        case USER_ACTIVATE_FAIL:
+            return { loading: false, success: false, error: action.payload };
+        default:
+            return state;
+    }
+};
+
+const resetPasswordInitialState = {
+    loading: false,
+    success: false,
+    error: null
+};
+
+export const userResetPasswordReducer = (state = resetPasswordInitialState, action) => {
+    switch (action.type) {
+        case USER_RESET_PASSWORD_REQUEST:
+            return { loading: true, success: false };
+        case USER_RESET_PASSWORD_SUCCESS:
+            return { loading: false, success: true, error: null };
+        case USER_RESET_PASSWORD_FAIL:
+            return { loading: false, success: false, error: action.payload };
+        default:
+            return state;
+    }
+};
+
+export const userResetPasswordConfirmReducer = (state = resetPasswordInitialState, action) => {
+    switch (action.type) {
+        case USER_RESET_PASSWORD_CONFIRM_REQUEST:
+            return { loading: true, success: false };
+        case USER_RESET_PASSWORD_CONFIRM_SUCCESS:
+            return { loading: false, success: true, error: null };
+        case USER_RESET_PASSWORD_CONFIRM_FAIL:
+            return { loading: false, success: false, error: action.payload };
+        default:
+            return state;
     }
 };

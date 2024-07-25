@@ -1211,3 +1211,329 @@ django.db.utils.IntegrityError: FOREIGN KEY constraint failed
 2024-07-23 20:48:04,418 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-07-24 00:21:21,763 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/real_estate/settings.py changed, reloading.
 2024-07-24 00:23:15,165 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-24 13:32:26,491 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-24 13:38:58,442 django.request WARNING  Not Found: /http://localhost:3000/activate/OQ/cao8i9-23e96a9a700c58dbaf8bc454bcc243d8
+2024-07-24 13:38:59,201 django.request WARNING  Not Found: /favicon.ico
+2024-07-24 13:40:35,087 django.request WARNING  Not Found: /http://localhost:3000/activate/OQ/cao8i9-23e96a9a700c58dbaf8bc454bcc243d8
+2024-07-24 13:40:37,946 django.request WARNING  Not Found: /http://localhost:3000/activate/OQ/cao8i9-23e96a9a700c58dbaf8bc454bcc243d8
+2024-07-24 13:52:09,752 django.request WARNING  Unauthorized: /api/v1/auth/users/reset_password/
+2024-07-24 13:54:12,719 django.request WARNING  Not Found: /password/reset/confirm/OQ/cao99f-a636e4b44872457a61acb8b72cc7de15
+2024-07-24 14:00:12,333 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create
+2024-07-24 14:50:26,524 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/real_estate/settings.py changed, reloading.
+2024-07-24 14:50:27,164 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-24 14:50:29,530 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/real_estate/settings.py changed, reloading.
+2024-07-24 16:22:56,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-24 16:24:23,395 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/real_estate/settings.py changed, reloading.
+2024-07-24 16:24:24,271 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 09:42:20,971 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 09:49:48,995 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 09:49:50,123 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 09:49:52,811 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 09:49:53,680 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:27:15,559 django.request ERROR    Internal Server Error: /api/v1/profile/me
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/v1/profile/me/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2024-07-25 10:27:57,064 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2024-07-25 10:29:03,176 django.request WARNING  Method Not Allowed: /api/v1/profile/me/
+2024-07-25 10:29:53,652 django.request ERROR    Internal Server Error: /api/v1/profile/me/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py", line 27, in get
+    user_profile = Profile.objects.get(user=user)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+apps.profiles.models.Profile.DoesNotExist: Profile matching query does not exist.
+2024-07-25 10:30:34,381 django.request ERROR    Internal Server Error: /api/v1/profile/me/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py", line 27, in get
+    user_profile = Profile.objects.get(user=user)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+apps.profiles.models.Profile.DoesNotExist: Profile matching query does not exist.
+2024-07-25 10:34:40,668 django.request WARNING  Not Found: /
+2024-07-25 10:34:41,441 django.request WARNING  Not Found: /favicon.ico
+2024-07-25 10:35:44,450 django.request ERROR    Internal Server Error: /api/v1/profile/me/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py", line 27, in get
+    user_profile = Profile.objects.get(user=user)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+apps.profiles.models.Profile.DoesNotExist: Profile matching query does not exist.
+2024-07-25 10:38:10,520 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2024-07-25 10:38:30,960 django.request ERROR    Internal Server Error: /api/v1/profile/me/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py", line 27, in get
+    user_profile = Profile.objects.get(user=user)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+apps.profiles.models.Profile.DoesNotExist: Profile matching query does not exist.
+2024-07-25 10:43:58,347 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:46:32,186 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/users/models.py changed, reloading.
+2024-07-25 10:46:32,711 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:50:13,880 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:50:44,703 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/users/managers.py changed, reloading.
+2024-07-25 10:50:45,191 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:50:55,650 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/users/forms.py changed, reloading.
+2024-07-25 10:50:56,152 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:53:01,829 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/models.py changed, reloading.
+2024-07-25 10:53:02,310 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:53:42,345 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/models.py changed, reloading.
+2024-07-25 10:53:42,865 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:54:06,608 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/models.py changed, reloading.
+2024-07-25 10:54:07,148 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:54:26,805 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py changed, reloading.
+2024-07-25 10:54:27,274 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:55:29,768 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/serializers.py changed, reloading.
+2024-07-25 10:55:30,263 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:55:46,848 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/users/serializers.py changed, reloading.
+2024-07-25 10:55:47,346 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 10:56:30,212 django.request ERROR    Internal Server Error: /api/v1/profile/me/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py", line 42, in get
+    user_profile = Profile.objects.get(user=user)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 435, in get
+    raise self.model.DoesNotExist(
+apps.profiles.models.Profile.DoesNotExist: Profile matching query does not exist.
+2024-07-25 10:57:00,959 django.request WARNING  Not Found: /favicon.ico
+2024-07-25 11:02:17,454 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py changed, reloading.
+2024-07-25 11:02:18,223 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:02:45,788 django.request WARNING  Not Found: /api/v1/profile/me/
+2024-07-25 11:03:45,309 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/views.py changed, reloading.
+2024-07-25 11:03:45,851 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:08:51,995 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/apps.py changed, reloading.
+2024-07-25 11:08:52,490 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:09:52,145 django.request WARNING  Not Found: /api/v1/profile/me/
+2024-07-25 11:14:48,566 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:19:07,710 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/profiles/signals.py changed, reloading.
+2024-07-25 11:19:08,185 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:19:57,856 django.request WARNING  Not Found: /api/v1/profile/me/
+2024-07-25 11:28:10,951 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 11:28:36,507 django.request WARNING  Not Found: /api/v1/profile/me/
+2024-07-25 11:35:01,796 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 12:20:43,888 django.request ERROR    Internal Server Error: /api/v1/properties/create/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/decorators.py", line 39, in decorator
+    assert not(isinstance(http_method_names, types.FunctionType)), \
+AssertionError: @api_view missing list of allowed HTTP methods
+2024-07-25 12:22:10,432 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 12:22:11,211 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 12:22:25,042 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-25 12:23:14,788 django.request WARNING  Not Found: /api/v1/users/create/
+2024-07-25 12:23:45,776 django.request WARNING  Method Not Allowed: /api/v1/auth/jwt/create/
+2024-07-25 12:24:40,368 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-25 12:28:07,433 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-25 12:32:38,677 django.request WARNING  Method Not Allowed: /api/v1/properties/all/
+2024-07-25 12:42:01,250 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1823, in get_prep_value
+    return int(value)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/contrib/auth/models.py", line 420, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py", line 51, in get_queryset
+    queryset = Property.objects.filter(user=user).order_by("-created_at")
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'pkid' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x70b122f493f0>.
+2024-07-25 12:55:37,974 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 12:55:39,162 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 12:55:40,705 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 12:55:41,568 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 12:55:43,068 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 12:55:43,860 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 13:00:04,480 django.request ERROR    Internal Server Error: /api/v1/properties/agents/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: APIView.as_view() takes 1 positional argument but 2 were given
+2024-07-25 13:00:53,000 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 13:00:54,115 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 13:01:44,835 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-25 13:01:45,945 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 16:06:05,307 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 16:19:43,039 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:19:43,090 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:21:20,952 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:24:27,660 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:24:27,673 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:37:19,977 django.request WARNING  Not Found: /favicon.ico
+2024-07-25 16:45:14,598 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 16:45:14,616 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:02:49,880 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:02:49,890 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:03:42,869 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:03:42,876 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:16:17,566 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:16:17,572 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 17:19:07,183 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:19:07,260 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:20:46,217 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:21:22,667 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:21:23,830 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:21:28,816 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:23:07,557 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-25 17:23:12,030 django.request WARNING  Not Found: /mediafiles/interior_sample.jpg
+2024-07-25 18:07:04,031 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 20:23:00,600 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/views.py changed, reloading.
+2024-07-25 20:23:01,397 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-25 20:23:15,753 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:23:15,802 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:23:20,481 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:23:20,488 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:26:19,225 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:26:19,232 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:27:54,889 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:27:54,912 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:29:45,633 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:29:45,643 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:29:54,294 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:29:54,302 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-25 20:34:04,804 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2024-07-25 21:02:04,622 django.request WARNING  Unauthorized: /api/v1/properties/all/
