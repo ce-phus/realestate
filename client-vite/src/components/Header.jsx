@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DarkMode from './Darkmode';
+import { logoname, logo4 } from '../assets';
 
 const Header = ({ toggleSidebar, isSidebarOpen }) => {
   return (
-    <nav className='fixed top-0 z-50 w-full bg-light border-b border-gray-300 dark:bg-dark dark:border-gray-700 flex items-center justify-between'>
+    <nav className='fixed top-0 z-50 w-full bg-white border-b border-gray-300 dark:bg-dark dark:border-gray-700 flex items-center justify-between'>
       <div className='flex items-center'>
         <button className="navbar-burger flex items-center dark:text-white text-dark-600 p-3" onClick={toggleSidebar} aria-expanded={isSidebarOpen} aria-controls="sidebar" aria-label="Toggle sidebar">
           <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -13,8 +14,8 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
           </svg>
         </button>
         <Link to="/" className="flex items-center gap-2 ml-3">
-          <img src='./logo4.png' className='w-[50px]' alt="Logo" />
-          <img src='./logoname.png' className='w-[150px] hidden md:block' alt="Logo Name" />
+          <img src={logo4} className='w-[50px]' alt="Logo" />
+          <img src={logoname} className='w-[150px] hidden md:block' alt="Logo Name" />
         </Link>
       </div>
 

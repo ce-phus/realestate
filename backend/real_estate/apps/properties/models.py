@@ -53,6 +53,9 @@ class Property(TimeStampedUUIDModel):
         verbose_name=_("Description"),
         default="Default description...update me please....",
     )
+    interior_features = models.TextField(verbose_name=_("Interior Features"), blank=True, help_text="Interior features and amenities.")
+    exterior_features = models.TextField(verbose_name=_("Exterior Features"), blank=True, help_text="Exterior features and amenities.")
+    community_amenities = models.TextField(verbose_name=_("Community Ammenities"), blank=True, help_text="Community amenities and nearby facilities.")
     country = CountryField(
         verbose_name=_("Country"),
         default="KE",

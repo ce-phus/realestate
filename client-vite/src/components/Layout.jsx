@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../actions/userActions';
 import Sidenav from './Sidenav';
@@ -20,17 +20,18 @@ const Layout = ({ children }) => {
   const { error, userInfo } = userLoginReducer;
 
   const navigate = useNavigate();
+  const location = useLocation()
 
   useEffect(() => {
-    if (userInfo) {
+    if (userInfo && location.pathname === '/login') {
       navigate('/');
     }
-  }, [navigate, userInfo]);
+  }, [navigate, userInfo, location.pathname]);
 
   useEffect(() => {
     if (error === "Given token not valid for any token type") {
       dispatch(logout());
-      navigate('/');
+      navigate('/login');
     }
   }, [error, navigate, dispatch]);
 

@@ -1537,3 +1537,156 @@ TypeError: APIView.as_view() takes 1 positional argument but 2 were given
 2024-07-25 20:29:54,302 django.request WARNING  Unauthorized: /api/v1/properties/all/
 2024-07-25 20:34:04,804 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
 2024-07-25 21:02:04,622 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:17:04,240 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 05:17:08,760 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:17:08,812 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:18:24,290 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:18:24,297 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:18:44,022 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:18:44,030 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:32,124 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:40,787 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:45,408 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:47,809 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:49,711 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:21:59,789 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:22:58,506 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:06,062 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:09,686 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:25,449 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:34,920 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:38,953 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:56,683 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:23:56,699 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:24:00,698 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:24:05,019 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:24:08,208 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:24:11,391 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:25:40,809 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:26:02,458 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:26:40,716 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:26:49,682 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:27:00,014 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:27:06,070 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:27:09,758 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:27:33,777 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:27:51,680 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:04,144 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:06,278 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:14,516 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:18,181 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:21,844 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:24,969 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:28,169 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:49,675 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:29:53,715 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:01,893 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:14,347 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:27,622 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:33,031 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:43,687 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:30:46,692 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:31:38,643 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:31:45,768 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:31:50,641 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:05,283 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:09,846 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:16,260 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:35,276 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:38,390 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:41,675 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:32:44,412 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:33:07,087 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:33:22,715 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:33:28,229 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 05:44:33,086 django.request WARNING  Not Found: /favicon.ico
+2024-07-26 05:44:47,416 django.request WARNING  Not Found: /mediafiles/profile_default.png
+2024-07-26 08:11:46,057 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 08:11:46,070 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 08:17:57,190 django.request ERROR    Internal Server Error: /api/v1/properties/details/bungalow/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: api_view.<locals>.decorator() got an unexpected keyword argument 'slug'
+2024-07-26 08:17:57,216 django.request ERROR    Internal Server Error: /api/v1/properties/details/bungalow/
+Traceback (most recent call last):
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/cephus/Documents/real-app/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: api_view.<locals>.decorator() got an unexpected keyword argument 'slug'
+2024-07-26 08:24:21,594 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:22,233 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:27,656 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:28,182 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:29,339 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:29,857 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:31,020 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:31,497 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:36,716 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:37,223 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:39,391 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:39,878 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:43,060 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:43,540 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:46,726 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:47,225 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:50,412 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:50,875 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:52,026 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:52,516 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:24:53,663 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:24:54,121 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:06,474 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:06,948 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:13,193 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:13,653 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:18,879 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:19,370 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:24,602 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:25,136 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:26,290 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:26,800 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:27,948 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:28,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:34,678 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:35,215 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:40,502 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:41,058 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:42,250 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:42,720 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:44,931 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:45,415 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 08:25:57,939 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/urls.py changed, reloading.
+2024-07-26 08:25:58,421 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:04:34,378 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:04:35,252 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:04:36,608 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:04:37,081 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:09,999 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:10,493 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:25,034 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:25,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:32,941 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:33,452 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:34,798 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:35,296 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:40,686 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:41,176 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:45,550 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:46,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:53,477 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:53,975 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:05:58,363 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-26 09:05:58,875 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:06:36,118 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:18:09,139 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/serializers.py changed, reloading.
+2024-07-26 09:18:09,648 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:18:17,073 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/serializers.py changed, reloading.
+2024-07-26 09:18:17,602 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 09:18:18,906 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/serializers.py changed, reloading.
+2024-07-26 09:18:19,429 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 11:26:09,907 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 11:26:09,959 django.request WARNING  Unauthorized: /api/v1/properties/all/

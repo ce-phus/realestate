@@ -25,6 +25,8 @@ class PropertySerializer(serializers.ModelSerializer):
             "slug",
             "ref_code",
             "description",
+            "interior_features",
+            "exterior_features",
             "country",
             "city",
             "postal_code",

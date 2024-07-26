@@ -199,19 +199,10 @@ export const getPropertyDetails = (slug) => async (dispatch, getState) => {
     try {
         dispatch({ type: PROPERTY_DETAILS_REQUEST });
 
-        const {
-            userLogin: { userInfo },
-        } = getState();
 
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
-            },
-        };
+        const { data } = await axios.get(`${API_URL}/api/v1/properties/details/${slug}/`);
 
-        const { data } = await axios.get(`${API_URL}/api/v1/properties/details/${slug}/`, config);
-
+        // console.log("PropertyDetail", data)
         dispatch({
             type: PROPERTY_DETAILS_SUCCESS,
             payload: data,
