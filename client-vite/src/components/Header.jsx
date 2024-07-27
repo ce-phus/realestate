@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DarkMode from './Darkmode';
 import { logoname, logo4 } from '../assets';
+import { LuCross } from "react-icons/lu";
 
 const Header = ({ toggleSidebar, isSidebarOpen }) => {
   return (
@@ -34,7 +35,16 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
       </div>
 
       <div className="flex items-center ms-3">
-        <DarkMode />
+        {/* <div className='flex bg-dark text-white items-center justify-center px-3 rounded-lg dark:bg-white dark:text-dark'>
+          
+            New Post
+          
+        </div> */}
+        
+        <DarkMode  className="mr-"/>
+        <div>
+          <img src={logo4} className='w-9 mx-3'/>
+        </div>
       </div>
     </nav>
   );

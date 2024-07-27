@@ -1690,3 +1690,53 @@ TypeError: api_view.<locals>.decorator() got an unexpected keyword argument 'slu
 2024-07-26 09:18:19,429 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-07-26 11:26:09,907 django.request WARNING  Unauthorized: /api/v1/properties/all/
 2024-07-26 11:26:09,959 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 18:42:57,253 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-26 18:43:43,801 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-26 18:43:43,848 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 08:29:29,656 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-27 10:41:11,688 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 10:41:11,741 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 12:42:18,879 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 12:42:18,929 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 13:50:43,465 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:51:15,970 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:54:11,827 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:54:51,782 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:55:09,072 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:56:48,900 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:57:19,311 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 13:58:13,211 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 14:00:02,797 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 14:01:28,506 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 14:02:42,671 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 14:17:23,430 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 14:24:28,854 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 15:23:51,665 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 15:49:06,354 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 15:51:50,868 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 15:54:20,818 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 18:32:54,631 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-27 18:33:21,684 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 18:33:21,732 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 18:33:44,469 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 18:33:48,961 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 18:38:21,654 django.utils.autoreload INFO     /home/cephus/Documents/real-app/backend/real_estate/apps/properties/models.py changed, reloading.
+2024-07-27 18:38:22,242 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-27 18:38:53,229 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-07-27 18:52:02,850 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 20:27:20,617 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:28:36,747 django.request WARNING  Not Found: /
+2024-07-27 20:28:37,504 django.request WARNING  Not Found: /favicon.ico
+2024-07-27 20:30:10,844 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:32:25,136 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 20:34:16,496 django.request WARNING  Unauthorized: /api/v1/properties/create/
+2024-07-27 20:34:30,479 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 20:34:30,492 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 20:34:30,526 django.request WARNING  Unauthorized: /api/v1/properties/all/
+2024-07-27 20:34:45,059 django.request WARNING  Not Found: /mediafiles/house_sample.jpg
+2024-07-27 20:35:56,055 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:36:05,070 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:54:52,976 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:55:24,248 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 20:56:37,421 django.request WARNING  Bad Request: /api/v1/properties/create/
+2024-07-27 21:00:00,625 django.request WARNING  Not Found: /mediafiles/house_sample.jpg

@@ -4,11 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import {motion} from 'framer-motion'
 import { getPropertyDetails } from '../actions/propertiesActions'
-import { MdOutlineClose } from "react-icons/md";
 import { close } from '../assets'
 
 
 const PropertyDetail = () => {
+    
     const navigate = useNavigate()
     const {slug} = useParams()
     const dispatch = useDispatch()
@@ -36,9 +36,9 @@ const PropertyDetail = () => {
 
   return (
     <Layout>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 md:gap-4 dark:bg-dark dark:text-white rounded-lg shadow-lg mx-4 w-full max-w-7xl mx-auto mb-10 '>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 dark:bg-dark dark:text-white rounded-lg shadow-lg w-full max-w-7xl mx-auto mb-10 '>
             <div className='mx-5'>
-                <img src={fullImageUrl} className='w-full h-full rounded-t-lg rounded-s-lg' alt={property.title}/>
+                <img src={fullImageUrl} className='w- h-full rounded-t-lg rounded-s-lg' alt={property.title}/>
                 <div className='mt-1 mb-3 mx-3 flex'>
                     <p className='text-lg font-medium'>Views: {property.views}</p>
                     <button onClick={togglePopup} className='text-lg font-medium ml-4'>Comments: </button>

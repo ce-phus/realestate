@@ -6,6 +6,7 @@ import AuthLayout from "./AuthLayout"
 import Spinner from "./Spinner"
 import Title from "./Title"
 import Property from "./Property"
+import Popup from "./Popup"
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     AuthLayout,
     Spinner,
     Title,
-    Property
+    Property,
+    Popup
 }

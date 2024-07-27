@@ -74,7 +74,7 @@ class Property(TimeStampedUUIDModel):
         default=112,
     )
     price = models.DecimalField(
-        verbose_name=_("Price"), max_digits=8, decimal_places=2, default=0.0
+        verbose_name=_("Price"), max_digits=12, decimal_places=2, default=0.0
     )
     tax = models.DecimalField(
         verbose_name=_("Property Tax"),

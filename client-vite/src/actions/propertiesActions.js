@@ -75,8 +75,13 @@ export const listAgentsProperties = () => async (dispatch, getState) => {
         dispatch({ type: LIST_AGENTS_PROPERTIES_REQUEST });
 
         const {
-            userLogin: { userInfo },
-        } = getState();
+            userLoginReducer: { userInfo },
+          } = getState();
+      
+          if (!userInfo || !userInfo.access) {
+            throw new Error('User is not authenticated');
+          }
+      
 
         const config = {
             headers: {
@@ -107,13 +112,19 @@ export const createProperty = (propertyData) => async (dispatch, getState) => {
         dispatch({ type: CREATE_PROPERTY_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            userLoginReducer: { userInfo },
         } = getState();
+
+        if (!userInfo || !userInfo.access) {
+            throw new Error('User is not authenticated');
+        }
+
+        console.log("User Info: ", userInfo)
 
         const config = {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
+                Authorization: `Bearer ${userInfo.access}`,
             },
         };
 
@@ -139,8 +150,13 @@ export const updateProperty = (slug, propertyData) => async (dispatch, getState)
         dispatch({ type: UPDATE_PROPERTY_REQUEST });
 
         const {
-            userLogin: { userInfo },
-        } = getState();
+            userLoginReducer: { userInfo },
+          } = getState();
+      
+          if (!userInfo || !userInfo.access) {
+            throw new Error('User is not authenticated');
+          }
+      
 
         const config = {
             headers: {
