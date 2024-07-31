@@ -1,5 +1,3 @@
-// actions/profileActions.js
-
 import axios from 'axios';
 import {
     GET_PROFILE_REQUEST,
@@ -23,18 +21,18 @@ export const getProfile = () => async (dispatch, getState) => {
         dispatch({ type: GET_PROFILE_REQUEST });
 
         const {
-            userLogin: { userInfo },
+            userLoginReducer: { userInfo },
         } = getState();
 
         const config = {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`,
+                Authorization: `Bearer ${userInfo.access}`,
             },
         };
 
         const { data } = await axios.get(`${API_URL}/api/v1/profile/me/`, config);
-
+        console.log("Profile data", data)
         dispatch({
             type: GET_PROFILE_SUCCESS,
             payload: data,
@@ -54,13 +52,13 @@ export const updateProfile = (username, profileData) => async (dispatch, getStat
       dispatch({ type: UPDATE_PROFILE_REQUEST });
 
       const {
-          userLogin: { userInfo },
+          userLoginReducer: { userInfo },
       } = getState();
 
       const config = {
           headers: {
               'Content-Type': 'application/json',
-              Authorization: `Bearer ${userInfo.token}`,
+              Authorization: `Bearer ${userInfo.access}`,
           },
       };
 
@@ -89,13 +87,13 @@ export const listAgents = () => async (dispatch, getState) => {
       dispatch({ type: LIST_AGENTS_REQUEST });
 
       const {
-          userLogin: { userInfo },
+          userLoginReducer: { userInfo },
       } = getState();
 
       const config = {
           headers: {
               'Content-Type': 'application/json',
-              Authorization: `Bearer ${userInfo.token}`,
+              Authorization: `Bearer ${userInfo.access}`,
           },
       };
 
@@ -120,13 +118,13 @@ export const listTopAgents = () => async (dispatch, getState) => {
       dispatch({ type: LIST_TOP_AGENTS_REQUEST });
 
       const {
-          userLogin: { userInfo },
+          userLoginReducer: { userInfo },
       } = getState();
 
       const config = {
           headers: {
               'Content-Type': 'application/json',
-              Authorization: `Bearer ${userInfo.token}`,
+              Authorization: `Bearer ${userInfo.access}`,
           },
       };
 

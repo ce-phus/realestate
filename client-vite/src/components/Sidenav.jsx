@@ -150,7 +150,7 @@ const Sidenav = forwardRef(({ isSidebarOpen }, ref) => {
             <li>
               <button
                 onClick={handleLogout}
-                className="flex dark:text-white gap-4  px-1 py-1.5 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer"
+                className="flex dark:text-white gap-4  w-full px-1 py-1.5 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer"
               >
                 <MdOutlineLogout className='mt-1'/> Logout
               </button>

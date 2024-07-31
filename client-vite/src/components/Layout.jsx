@@ -6,7 +6,7 @@ import Sidenav from './Sidenav';
 import AuthLayout from './AuthLayout';
 import Header from './Header';
 import { useRef } from 'react';
-import { logout } from '../actions/userActions';
+
 
 const Layout = ({ children }) => {
 
@@ -29,10 +29,11 @@ const Layout = ({ children }) => {
   }, [navigate, userInfo, location.pathname]);
 
   useEffect(() => {
-    if (error === "Given token not valid for any token type") {
-      dispatch(logout());
-      navigate('/login');
-    }
+    if (error) {
+      if (error.detail === "Given token not valid for any token type") {
+        navigate('/login');
+      }
+    } 
   }, [error, navigate, dispatch]);
 
   useEffect(() => {

@@ -15,12 +15,12 @@ import {
     LIST_TOP_AGENTS_FAIL
 } from '../constants/index';
 
-export const profileDetailsReducer = (state = { profile: {} }, action) => {
+export const getProfileReducer = (state = { profile: {} }, action) => {
     switch (action.type) {
         case GET_PROFILE_REQUEST:
             return { ...state, loading: true };
         case GET_PROFILE_SUCCESS:
-            return { loading: false, profile: action.payload };
+            return { loading: false, profile: action.payload.profile };
         case GET_PROFILE_FAIL:
             return { loading: false, error: action.payload };
         default:

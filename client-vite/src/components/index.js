@@ -7,6 +7,7 @@ import Spinner from "./Spinner"
 import Title from "./Title"
 import Property from "./Property"
 import Popup from "./Popup"
+import ProfileProperties from "./ProfileProperties"
 
 export {
     Header,
@@ -17,5 +18,6 @@ export {
     Spinner,
     Title,
     Property,
-    Popup
+    Popup,
+    ProfileProperties
 }

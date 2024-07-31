@@ -9,7 +9,7 @@ import {
      } from "./userReducer";
 
 import {
-    profileDetailsReducer,
+    getProfileReducer,
     profileUpdateReducer,
     agentListReducer,
     topAgentsListReducer,
@@ -32,7 +32,7 @@ const allReducers = combineReducers({
     userActivateReducer,
     userResetPasswordConfirmReducer,
     userResetPasswordReducer,
-    profileDetailsReducer,
+    getProfileReducer,
     profileUpdateReducer,
     agentListReducer,
     topAgentsListReducer,

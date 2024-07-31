@@ -1,4 +1,3 @@
-// src/components/Popup.jsx
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
@@ -35,21 +34,16 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
   const userLoginReducer = useSelector((state) => state.userLoginReducer);
   const { error: LoginError, userInfo } = userLoginReducer;
 
-  const handleFileChange = (e) => {
-    const files = Array.from(e.target.files);
-    console.log("Files selected:", files); 
-    if (files.length > 0) {
-      setCoverPhoto(files[0]); // Set the first file as cover photo
-      setPhotos(files.slice(1)); // Remaining files as additional photos
-    }
+  const handleCoverPhotoChange = (e) => {
+    const file = e.target.files[0];
+    setCoverPhoto(file);
   };
-
-  useEffect(() => {
-    if (!userInfo) {
-      // User is not authenticated
-      console.error('User is not authenticated or the token has expired.');
-    }
-  }, [userInfo]);
+  
+  const handlePhotosChange = (e) => {
+    const files = Array.from(e.target.files);
+    setPhotos(files);
+  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,23 +68,20 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
       formData.append('bathrooms', Number(bathrooms));
       formData.append('advert_type', advert_type);
       formData.append('property_type', property_type);
+      formData.append("cover_photo", cover_photo);
       
-      if (cover_photo) {
-        console.log("Cover photo:", cover_photo);
-        formData.append('cover_photo', cover_photo);
-      }
       photos.forEach((photo, index) => {
-        console.log(`Photo ${index + 1}:`, photo);
-        formData.append(`photo${index + 1}`, photo);
+        formData.append(`photos[${index}]`, photo);
       });
   
-      console.log("FormData being sent: ", formData);
       dispatch(createProperty(formData));
+      console.log("Form Data:", formData);
     } else {
       console.error('User must be authenticated to create a property.');
     }
   };
   
+
   if (!isPopupOpen) return null;
 
   return (
@@ -170,7 +161,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Postal Code</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="text"
                 value={postal_code}
                 onChange={(e) => setPostalcode(e.target.value)}
@@ -179,7 +170,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Street Address</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="text"
                 value={street_address}
                 onChange={(e) => setStreetAddress(e.target.value)}
@@ -190,8 +181,8 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Property Number</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full" 
-                type="text"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                type="number"
                 value={property_number}
                 onChange={(e) => setPropertyNumber(e.target.value)}
               />
@@ -199,7 +190,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Price</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="number"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
@@ -208,7 +199,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Tax</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="number"
                 value={tax}
                 onChange={(e) => setTax(e.target.value)}
@@ -219,7 +210,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Final Property Price</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="number"
                 value={final_property_price}
                 onChange={(e) => setFinalPropertyPrice(e.target.value)}
@@ -228,8 +219,8 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Plot Area</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
-                type="text"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                type="number"
                 value={plot_area}
                 onChange={(e) => setPlotArea(e.target.value)}
               />
@@ -237,8 +228,8 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Total Floors</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
-                type="text"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                type="number"
                 value={total_floors}
                 onChange={(e) => setTotalFloors(e.target.value)}
               />
@@ -248,7 +239,7 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Bedrooms</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="number"
                 value={bedroom}
                 onChange={(e) => setBedrooms(e.target.value)}
@@ -257,30 +248,49 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Bathrooms</label>
               <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 type="number"
                 value={bathrooms}
                 onChange={(e) => setBathrooms(e.target.value)}
               />
             </div>
-            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
-              <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Advert Type</label>
-              <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
-                type="text"
-                value={advert_type}
-                onChange={(e) => setAdvertType(e.target.value)}
-              />
-            </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-2">
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
+              <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Advert Type</label>
+              <select
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                value={advert_type}
+                onChange={(e) => setAdvertType(e.target.value)}
+              >
+                <option value="">Select</option>
+                <option value="For Rent">For Rent</option>
+                <option value="For Sale">For Sale</option>
+                <option value="Auction">Auction</option>
+              </select>
+            </div>
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
               <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Property Type</label>
-              <input
-                className="appearance-none appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
-                type="text"
+              <select
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
                 value={property_type}
                 onChange={(e) => setPropertyType(e.target.value)}
+              >
+                <option value="Other">Select</option>
+                <option value="Apartment">Apartment</option>
+                <option value="House">House</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Warehouse">Warehouse</option>
+                <option value="Office">Office</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-2">
+              <label className="block uppercase tracking-wide dark:text-white text-xs font-bold mb-2">Cover Photo</label>
+              <input
+                className="appearance-none bg-gray-50 dark:bg-dark block border border-gray-300 placeholder-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-tertiary dark:focus:border-blue-500 p-2.5 rounded-lg w-full"
+                type="file"
+                onChange={handleSubmit}
               />
             </div>
           </div>
@@ -297,19 +307,16 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
                   id="dropzone-file"
                   type="file"
                   className="hidden"
-                  onChange={handleFileChange}
+                  onChange={handlePhotosChange}
                   multiple
+                  accept="image/*"
                 />
-                <button type="button" onClick={() => document.getElementById('dropzone-file').click()}></button>
+                <button type="button" onClick={() => document.getElementById('dropzone-file').click()}>Upload Photos</button>
             </label>
         </div> 
-          <div className="flex justify-end mt-4">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              disabled={!userInfo}
-            >
-              Create Property
+          <div className="w-full mt-4">
+            <button className="bg-blue-500 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="submit">
+              Submit
             </button>
           </div>
           <div className="flex justify-start mt-4">
@@ -325,6 +332,6 @@ const Popup = ({ isPopupOpen, togglePopup }) => {
       </div>
     </motion.div>
   );
-};
+}
 
 export default Popup;

@@ -50,7 +50,6 @@ export const listAllProperties = () => async (dispatch, getState) => {
       };
   
       const { data } = await axios.get(`${API_URL}/api/v1/properties/all/`, config);
-      console.log('Property List: ', data);
   
       dispatch({
         type: LIST_ALL_PROPERTIES_SUCCESS,
@@ -119,11 +118,10 @@ export const createProperty = (propertyData) => async (dispatch, getState) => {
             throw new Error('User is not authenticated');
         }
 
-        console.log("User Info: ", userInfo)
 
         const config = {
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'multipart/form-data',
                 Authorization: `Bearer ${userInfo.access}`,
             },
         };
